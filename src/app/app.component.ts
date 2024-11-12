@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { SingleFileUploadComponent } from './single-file-upload/single-file-upload.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [SingleFileUploadComponent, RouterModule] // Import your standalone component here
 })
 export class AppComponent {
   title = 'file-upload-app';
 }
+
